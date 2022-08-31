@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+.home{
+    background-image: url("https://previews.123rf.com/images/evgeniyam/evgeniyam1711/evgeniyam171100103/90013703-patr%C3%B3n-sin-fisuras-con-perros-de-dibujos-animados-sobre-fondo-blanco-ilustraci%C3%B3n-vectorial.jpg");
+    width: 100vw;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+.header{
+    background-color: rgb(226, 207, 172);
+    height: 27vh;
+    display: flex;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 2px 2px rgba(9, 2, 37, 0.952);
+    color: black;
+    align-items: center;
+}
+.logo{
+    width: 90px;
+    height: 80px;
+    background-color:rgb(9, 2, 37);
+    border-radius: 50%;
+    margin-left: 2rem;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px black, 0px 0px 10px black;
+}
+.createRecipe{
+    bottom: 3rem;
+    width: 20rem;
+    height: 3rem;
+    border: 2px solid black;
+    box-shadow: 3px 1px black;
+    border-radius: 50px;
+    text-align: center;
+    background-color: rgb(226, 207, 172);
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+.createRecipe:hover{
+    box-shadow: 0px 0px 10px rgb(226, 207, 172), 0px 0px 10px rgb(226, 207, 172),0px 0px 10px rgb(226, 207, 172);
+    text-shadow: 0px 0px 10px black;
+    border: 3px solid black;
+}

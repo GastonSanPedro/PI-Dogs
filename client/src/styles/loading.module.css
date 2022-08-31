@@ -1,0 +1,18 @@
+.loading{
+    background-image: url("https://img.freepik.com/vector-premium/diferentes-tipos-perros-gatos-dibujos-animados_52569-1311.jpg?w=2000");
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 0;
+}
+
+.imgLoading{
+    background-color: #a5aad9b7;
+    border: none;
+    width: 30rem;
+    height: 20rem;
+}

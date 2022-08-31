@@ -1,0 +1,17 @@
+.landingPage{
+    background-image: url("../img/backgroundLandingPage.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.huesoPerro{
+    margin-top: 6rem;
+    width: 25rem;
+    height: 6.5rem;
+}
+.huesoPerro:hover{
+    box-shadow: 0px 0px 10px rgb(112, 72, 72), 0px 0px 10px rgb(112, 72, 72),0px 0px 10px rgb(112, 72, 72),0px 0px 10px rgb(112, 72, 72);
+}

@@ -1,0 +1,61 @@
+.container{
+    background-image: url('https://previews.123rf.com/images/evgeniyam/evgeniyam1711/evgeniyam171100103/90013703-patr%C3%B3n-sin-fisuras-con-perros-de-dibujos-animados-sobre-fondo-blanco-ilustraci%C3%B3n-vectorial.jpg');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerDetail{
+    margin-top: 10px;
+    background-image: url('https://img.freepik.com/vector-premium/patron-lindas-mascotas-diferentes-perros_113065-737.jpg?w=2000');
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 700px;
+    height: 605px;
+    box-shadow: 2px 2px 2px 2px rgb(5, 5, 5),2px 2px 2px 2px rgb(0, 0, 0), 2px 2px 2px 2px rgb(0, 0, 0);
+}
+
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.containerDetail h1{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px red, 2px 2px 2px red , 2px 2px 2px red;
+}
+
+.back{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: rgb(58, 138, 78);
+    font-weight: bold;
+    margin-left: 270px;
+}
+
+.back:hover{
+    background-color: black;
+    border: 3px solid rgb(25, 116, 202);
+    color:rgb(25, 116, 202);
+    
+}

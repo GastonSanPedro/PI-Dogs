@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 1.4rem;
+    font-family: 'Tourney', cursive;
+    text-shadow: 0px 0px 2px black, 0px 0px 2px black;
+    
+}
+section:hover{
+    color:white;
+}
+.searchBar{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%; 
+}
+input{
+    width: 30rem;
+    height: 2rem;
+    border: 2px solid black;
+    box-shadow: 3px 1px black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+input:hover{
+    box-shadow: 0px 0px 10px black, 0px 0px 10px black;
+}
+select{
+    width: 15rem;
+    height: 2rem;
+    border: 2px solid black;
+    box-shadow: 3px 1px black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+select:hover{
+    box-shadow: 0px 0px 10px black, 0px 0px 10px black;
+}
+.marco{
+    background-image: url('../img/marcoHueso.jpg');
+    background-size: 190px 75px;
+    width: 190px;
+    height: 75px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    border: 1px black solid;
+}
+
+.searchDog{
+    margin-top: 44px;
+    color: #bd754e;
+    text-shadow: 2px 2px 2px black;
+}
+
+.searchDog:hover{
+    color: white
+}
+
+.buscador{
+    display: flex;
+    align-items: center;
+}
+
+.buttonSearch{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+.buttonSearch:hover{
+    box-shadow: 1px 1px 1px black;
+}

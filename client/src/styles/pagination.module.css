@@ -1,0 +1,18 @@
+.pagination{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.paginationButton{
+    background-color: rgb(201, 218, 215);
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.paginationButton:hover{
+    border: 2px solid black;
+    background-color: rgb(241, 245, 244);
+}
