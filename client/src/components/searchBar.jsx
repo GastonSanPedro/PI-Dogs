@@ -8,10 +8,13 @@ export default function SearchBar({
   onChangeTemperament,
   onClickSearch,
   onChangeOrderWeight,
-  onChangeFrom
+  onChangeFrom,
+  clearFilters,
+  searchInput
 }) {
 
   const allTemperaments = useSelector(state => state.temperaments.temperaments);  
+  const allDogs = useSelector(state => state.dogs.dogs)
   
   return (
     <div className={s.searchBar}>
@@ -23,6 +26,7 @@ export default function SearchBar({
           type="text"
           placeholder="Type something to search..."
           onChange={onChangeSearch}
+          value={searchInput}
         />
         <button onClick={onClickSearch} className={s.buttonSearch}>Search</button>
       </section>
@@ -60,12 +64,14 @@ export default function SearchBar({
           <option value="api">API</option>
         </select>
         <select onChange={onChangeTemperament}>
-          <option value="Temperament" >Temperament</option>
+          <option selected disabled>Temperaments</option>
+          <option value="all" >All</option>
           {allTemperaments &&
             allTemperaments.map((el) => {
               return <option value={el.name} key={el.ID}>{el.name}</option>;
             })}
         </select>
+        <button className={s.buttonClear} onClick={clearFilters} value="clearFilters">Clear Filters</button>
       </section>
     </div>
   );

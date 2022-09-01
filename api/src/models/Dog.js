@@ -28,11 +28,16 @@ module.exports = (sequelize) => {
     },
     img:{
       type: DataTypes.STRING,
+      defaultValue: 'https://img.freepik.com/foto-gratis/hermoso-retrato-mascota-perro_23-2149218452.jpg?w=2000'
     },
     db:{
       type: DataTypes.BOOLEAN,
       allowNull:false,
       defaultValue: true
+    },
+    origin:{
+      type: DataTypes.STRING,
+      allowNull:false,
     }
     },
     {

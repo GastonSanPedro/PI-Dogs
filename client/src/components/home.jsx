@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {useSelector,useDispatch} from "react-redux"
-import { getDogsByName, getAllDogs, getAllTemperaments, orderByName, orderByWeight, filterByTemperament, filterByFrom} from "../redux/actions";
+import { getDogsByName, getAllDogs, getAllTemperaments, orderByName, orderByWeight, filterByTemperament, filterByFrom, clearAllFilters} from "../redux/actions";
 import { useState, useEffect} from "react";
 import SearchBar from  './searchBar.jsx'
 import ListDogs from './listDogs';
@@ -12,68 +12,86 @@ import Pagination from "./pagination.jsx"
 
 export default function Home (){
     //PRECARGO LA PAGINA CON TODAS LAS RECETAS
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const allDogs = useSelector(state => state.dogs.dogs); 
-    const dogsFilter= useSelector(state => state.dogs.dogsFilter)
+    const dogsFilter= useSelector(state => state.dogs.dogsFilter);
 
     useEffect(()=>{
     dispatch(getAllDogs());
     dispatch(getAllTemperaments())
     },[dispatch])  
 
+
     const [searchInput, setSearchInput]= useState("")
     const [isLoading, setIsLoading]= useState(true)
-    const [currentPage, setCurrentPage] = useState(0)
+//Paginado -----------------------------------------------------------------------------------------------------------
+    const [currentPage, setCurrentPage] = useState(1)
+    const [dogsPerPage, setDogsPerPage] = useState(8)
+    const indexOfLastDog = currentPage * dogsPerPage
+    const indexOfFirstDog = indexOfLastDog-dogsPerPage
+    const currentDog = allDogs.slice(indexOfFirstDog,indexOfLastDog)
+    const currentDogFilter= dogsFilter.slice(indexOfFirstDog,indexOfLastDog)
 
+    const pagination = (numberOfPage)=>{
+        setCurrentPage(numberOfPage)
+    }
+
+    const paginationBack = ()=>{
+        if(currentPage > 1) setCurrentPage(currentPage - 1)
+    }
+
+    const paginationNext = ()=>{
+        if(dogsFilter.length>0){
+            if(Math.ceil((dogsFilter.length/dogsPerPage)) >= currentPage + 1) setCurrentPage(currentPage + 1)
+        }else{
+            if(Math.ceil((allDogs.length/dogsPerPage)) >= currentPage + 1) setCurrentPage(currentPage + 1)
+        }
+    }
+//Aca TERMINA EL PAGINADO-----------------------------------------------------------------------------------
+
+//Loading
     setTimeout(function(){
         setIsLoading(false)
     }, 3000);
 
+//input search
     const onChangeSearch = (event)=>{
         setSearchInput(event.target.value)
     }
 
     const onClickSearch = (event)=> {
         event.preventDefault()
-        setCurrentPage(0)
+        setCurrentPage(1)
         dispatch(getDogsByName(searchInput))
+        setSearchInput("")
     }
 
+//orders
     const onChangeOrderAlpabethic = (event)=>{
         dispatch(orderByName(event.target.value))
-        setCurrentPage(0)
+        setCurrentPage(1)
     }
 
     const onChangeOrderWeight =(event)=>{
         dispatch(orderByWeight(event.target.value))
-        setCurrentPage(0)
+        setCurrentPage(1)
     }
 
+//filters
     const onChangeTemperament = (event)=>{
         dispatch(filterByTemperament(event.target.value))
-        setCurrentPage(0)
+        setCurrentPage(1)
     }
 
     const onChangeFrom = (event)=>{
         dispatch(filterByFrom(event.target.value))
-        setCurrentPage(0)
-    }
-    const paginationBack = ()=>{
-        if(currentPage > 0) setCurrentPage(currentPage - 8)
+        setCurrentPage(1)
     }
 
-    const paginationNext = ()=>{
-        if(allDogs.length > currentPage + 8) setCurrentPage(currentPage + 8)
+    const clearFilters= (event)=>{
+        dispatch(clearAllFilters(event.target.value))
+        setCurrentPage(1)
     }
-
-    const allDogsPagination = ()=>{
-        return allDogs.slice(currentPage,currentPage + 8)
-    }
-
-    const dogsFilterPagination = ()=>{
-            return dogsFilter.slice(currentPage,currentPage + 8)
-    }
-    
 
     return(
         <div>
@@ -82,10 +100,10 @@ export default function Home (){
             <div className={s.home}>
             <article className={s.header}>
             <img src={logo} alt="logo" className={s.logo}/>
-            <SearchBar onChangeSearch={onChangeSearch} onChangeOrderAlpabethic={onChangeOrderAlpabethic} onChangeTemperament={onChangeTemperament} onClickSearch={onClickSearch} onChangeOrderWeight={onChangeOrderWeight} onChangeFrom={onChangeFrom}/>
+            <SearchBar onChangeSearch={onChangeSearch} onChangeOrderAlpabethic={onChangeOrderAlpabethic} onChangeTemperament={onChangeTemperament} onClickSearch={onClickSearch} onChangeOrderWeight={onChangeOrderWeight} onChangeFrom={onChangeFrom} clearFilters={clearFilters} searchInput={searchInput}/>
             </article>
-            <Pagination paginationNext={paginationNext} paginationBack={paginationBack}/>
-            <ListDogs allDogs={allDogsPagination()} dogsFilter={dogsFilterPagination()}/> 
+            <Pagination allDogs={allDogs} dogsPerPage={dogsPerPage} pagination={pagination} dogsFilter={dogsFilter} paginationNext={paginationNext} paginationBack={paginationBack}/>
+            <ListDogs allDogs={currentDog} dogsFilter={currentDogFilter}/> 
             <Link to="/createDog"><button className={s.createRecipe}>Add new dog</button></Link>
             </div>}
         </div>

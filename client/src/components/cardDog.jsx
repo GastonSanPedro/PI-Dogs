@@ -2,7 +2,7 @@ import React from 'react'
 import s from '../styles/cardDog.module.css'
 import {Link} from 'react-router-dom'
 
-export default function CardDog({name, img, temperament, weight, id}){
+export default function CardDog({name, img, temperament, weight, id, origin}){
     
     return(
         <div className={s.cardContainer}>

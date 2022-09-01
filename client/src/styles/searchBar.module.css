@@ -78,3 +78,19 @@ select:hover{
 .buttonSearch:hover{
     box-shadow: 1px 1px 1px black;
 }
+
+.buttonClear{
+    width: 15rem;
+    height: 2rem;
+    border: 2px solid black;
+    box-shadow: 3px 1px black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.buttonClear:hover{
+    box-shadow: 0px 0px 10px black, 0px 0px 10px black;
+}

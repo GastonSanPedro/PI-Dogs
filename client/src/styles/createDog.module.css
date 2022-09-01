@@ -45,6 +45,7 @@ textarea{
     background-color: white;
     font-weight: bold;
     margin-left: 30%;
+    height: 40px;
 }
 .add:hover{
     background-color: black;
@@ -67,3 +68,7 @@ textarea{
     color:rgb(25, 116, 202)
 }
 
+.error{
+    color: red;
+    font-size: 0.8rem;
+}

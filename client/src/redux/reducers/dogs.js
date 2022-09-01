@@ -6,13 +6,15 @@ import {
   ORDER_BY_NAME,
   ORDER_BY_WEIGHT,
   FILTER_BY_TEMPERAMENT,
-  FILTER_BY_FROM
+  FILTER_BY_FROM,
+  CLEAR_ALL_FILTERS
 } from "../actions/actionTypes";
 
 const initialState = {
+  allDogs:[],
   dogs: [],
   dogsFilter: [],
-  dogDetail: {}
+  dogDetail: {},
 };
 
 export default function dogs(state = initialState, action) {
@@ -25,11 +27,13 @@ export default function dogs(state = initialState, action) {
       return {
         ...state,
         dogs: action.payload,
+        allDogs: action.payload,
       };
     case GET_DOGS_BY_NAME:
       return {
         ...state,
         dogs: action.payload,
+        dogsFilter:[],
       };
     case GET_DOG_BY_ID:
       return {
@@ -56,6 +60,13 @@ export default function dogs(state = initialState, action) {
           ...state,
           dogsFilter: action.payload,
         };
+      case CLEAR_ALL_FILTERS:
+        return{
+          ...state,
+          dogs: action.payload,
+          dogsFilter: [],
+          dogDetail: {}
+        }
     default:
       return { ...state };
   }

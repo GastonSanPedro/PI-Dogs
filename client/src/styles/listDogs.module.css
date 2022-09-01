@@ -1,5 +1,6 @@
 .container{
     width: 90vw;
+    min-height: 34vh;
     border: 5px solid black;
     color: white;
     margin-left: 4%;
@@ -9,5 +10,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    background-color: beige;
+    background-color: rgb(226, 207, 172);
+}
+.anyDog{
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.anyDog:hover{
+    color: antiquewhite;
 }

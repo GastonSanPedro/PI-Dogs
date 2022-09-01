@@ -17,6 +17,7 @@ async function getAllDogsFromApi() {
       life_span: e.life_span,
       img: e.image?.url,
       temperament: e.temperament,
+      origin: e.origin
     };
   });
   return allDogs;

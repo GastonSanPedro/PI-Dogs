@@ -1,4 +1,4 @@
-import { filterDogsByTemperament, orderDogsByName, orderDogsByWeight, filterDogsByFrom } from "../helpers/dogs";
+import { filterDogsByTemperament, orderDogsByName, orderDogsByWeight, filterDogsByFrom, clearOrder } from "../helpers/dogs";
 import {
   GET_ALL_DOGS,
   GET_DOG_BY_ID,
@@ -8,7 +8,8 @@ import {
   ORDER_BY_NAME,
   ORDER_BY_WEIGHT,
   FILTER_BY_TEMPERAMENT,
-  FILTER_BY_FROM
+  FILTER_BY_FROM,
+  CLEAR_ALL_FILTERS
 } from "./actionTypes";
 const axios = require("axios");
 
@@ -84,9 +85,8 @@ export const filterByTemperament = (temperament)=> async (dispatch,getState)=>{
 
 export const filterByFrom= (from) => async (dispatch, getState)=>{
   try {
-    const {dogs} = getState().dogs
-    console.log(dogs)
-    const payload= filterDogsByFrom(dogs, from)
+    const {dogs, allDogs} = getState().dogs
+    const payload= filterDogsByFrom(dogs, allDogs, from)
     dispatch({
       type: FILTER_BY_FROM,
       payload
@@ -122,6 +122,18 @@ export const orderByWeight = (order)=> async (dispatch, getState)=>{
   }
 }
 
+export const clearAllFilters = ()=>async (dispatch,getState)=>{
+  const {allDogs} = getState().dogs
+  const payload= clearOrder(allDogs)
+  try {
+    dispatch({
+      type: CLEAR_ALL_FILTERS,
+      payload
+    })
+  } catch (error) {
+    return alert(error)
+  }
+}
 
 
 

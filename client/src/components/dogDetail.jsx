@@ -28,10 +28,10 @@ export default function DogDetail(){
                 <h1>{dog.name}</h1>
              <img src={dog.img} alt="img" />
                 <article className={s.infoCard}>
-                    <p className={s.temperament}>Temperaments: {dog.temperament}</p>
-                    <p>Weight: {dog.weight}</p>
-                    <p>Height: {dog.height}</p>
-                    <p>Life span: {dog.life_span}</p>
+                    <p className={s.infoDog}>Temperaments: {dog.temperament}</p>
+                    <p className={s.infoDog}>Weight: {dog.weight}</p>
+                    <p className={s.infoDog}>Height: {dog.height}</p>
+                    <p className={s.infoDog}>Life span: {dog.life_span}</p>
                     <Link to="/home"><button className={s.back}>Go Back</button></Link>
                 </article>  
             </div>
