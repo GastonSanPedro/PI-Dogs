@@ -71,6 +71,13 @@ export default function SearchBar({
               return <option value={el.name} key={el.ID}>{el.name}</option>;
             })}
         </select>
+        <select onChange={onChangeTemperament}>
+          <option selected disabled>origin</option>
+          {allTemperaments &&
+            allTemperaments.map((el) => {
+              return <option value={el.name} key={el.ID}>{el.name}</option>;
+            })}
+        </select>
         <button className={s.buttonClear} onClick={clearFilters} value="clearFilters">Clear Filters</button>
       </section>
     </div>
