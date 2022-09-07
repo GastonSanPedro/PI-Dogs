@@ -24,7 +24,6 @@ const getTemperaments = require('./src/controllers/temperaments.js')
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   server.listen(process.env.PORT, async() => {
-    
     let temperaments = await getTemperaments()
     temperaments.forEach(async (e) => await Temperament.create({ name: e }))
     console.log("temperamentos cargados con exito")
