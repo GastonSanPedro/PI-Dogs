@@ -100,6 +100,7 @@ export default function CreateDog() {
     event.preventDefault();
     dispatch(createDog(input));
     alert("Dog was added successfully");
+
     setInput({
       name: "",
       heightMin: "",

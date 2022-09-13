@@ -25,7 +25,8 @@ const getTemperaments = require('./src/controllers/temperaments.js')
 conn.sync({ force: false }).then(() => {
   server.listen(process.env.PORT, async() => {
     let temperaments = await getTemperaments()
-    temperaments.forEach(async (e) => await Temperament.create({ name: e }))
+    temperaments.forEach(async (e) => await Temperament.findOrCreate({ 
+      where: {name: e }}))
     console.log("temperamentos cargados con exito")
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });

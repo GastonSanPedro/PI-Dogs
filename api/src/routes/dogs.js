@@ -41,6 +41,9 @@ router.post("/", async (req, res) => {
   const { temperament, name, heightMin, heightMax , weightMin, weightMax, life_spanMin, life_spanMax, img } = req.body;
   if(!name || !heightMin || !heightMax || !weightMin || !weightMax ) return res.status(400).send('Faltan datos obligatorios')
   try {
+    const dogExist = await Dog.findOne({ where: {name} });
+    
+    if(!dogExist){
     const newDog = await Dog.create({
         name,
         height: heightMin + ' - ' + heightMax,
@@ -55,6 +58,9 @@ router.post("/", async (req, res) => {
         await newDog.addTemperament(temperamentDb);
       });
     res.json(newDog) 
+    }else{
+      throw new Error ('The name of this dogs exists')
+    }
   } catch (error) {
     res.send({ error: error.message })
   }
