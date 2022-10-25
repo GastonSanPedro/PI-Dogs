@@ -1,27 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 .home{
-    background-image: url("https://previews.123rf.com/images/evgeniyam/evgeniyam1711/evgeniyam171100103/90013703-patr%C3%B3n-sin-fisuras-con-perros-de-dibujos-animados-sobre-fondo-blanco-ilustraci%C3%B3n-vectorial.jpg");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTok1bGpkRQUsVjR8yjw5VWxpDJcubGJvaouizKOVRZTTG51X1eXJdIuJKl4fGSIpi3_kg&usqp=CAU");
     width: 100vw;
-    height: 100%;
+    min-height: 100vh;
     background-repeat: repeat;
-    background-size: 300px 300px;
+    background-size: 500px 500px;
 }
 .header{
-    background-color:rgba(137, 134, 134, 0.804) ;
+    background-image: url('https://img.freepik.com/vector-premium/fondo-pantalla-patrones-fisuras-animal-cabeza-perro-lindo-diseno-gris-oscuro_561841-1233.jpg?w=2000');
     height: 27vh;
     display: flex;
     border-radius: 0px 0px 30px 30px;
     box-shadow: 2px 2px rgba(9, 2, 37, 0.952);
     color: black;
     align-items: center;
+    justify-content: center;
+    background-repeat: repeat;
+    background-size: 500px 500px;
 }
 .logo{
-    width: 90px;
-    height: 80px;
+    width: 120px;
+    height: 110px;
     background-color:rgb(9, 2, 37);
     border-radius: 50%;
-    margin-left: 2rem;
+    margin-left: 1.2rem;
     border: 1px solid black;
     box-shadow: 0px 0px 10px black, 0px 0px 10px black;
 }
