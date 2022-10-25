@@ -9,6 +9,7 @@ import s from "../styles/home.module.css"
 import logo from "../img/logo.jpg"
 import Loading from "./loading";
 import Pagination from "./pagination.jsx"
+import fotoAddDog from "../img/addDog.jpg"
 
 export default function Home (){
     //PRECARGO LA PAGINA CON TODAS LAS RECETAS
@@ -104,7 +105,8 @@ export default function Home (){
             </article>
             <Pagination allDogs={allDogs} dogsPerPage={dogsPerPage} pagination={pagination} dogsFilter={dogsFilter} paginationNext={paginationNext} paginationBack={paginationBack}/>
             <ListDogs allDogs={currentDog} dogsFilter={currentDogFilter}/> 
-            <Link to="/createDog"><button className={s.createRecipe}>Add new dog</button></Link>
+            <Link to="/createDog"><p className={s.addDog}><img src={fotoAddDog} alt="perro" className={s.createDog}/></p></Link>
+            <Pagination allDogs={allDogs} dogsPerPage={dogsPerPage} pagination={pagination} dogsFilter={dogsFilter} paginationNext={paginationNext} paginationBack={paginationBack}/>
             </div>}
         </div>
     )

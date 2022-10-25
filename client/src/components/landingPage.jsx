@@ -6,7 +6,11 @@ import huesoPerro from "../img/huesoPerro.png"
 function LandingPage() {
   return (
     <div className={s.landingPage}>
-      <Link to="/home"><img src={huesoPerro} alt="hueso" className={s.huesoPerro}/></Link>
+      <div className={s.container}>
+      <div className={s.title}>¡Welcome!</div>
+      <p className={s.subtitle}>Search and meet about all dogs</p>
+      <Link to="/home"><button className={s.enter}>Enter</button></Link> 
+      </div>
     </div>
   );
 }

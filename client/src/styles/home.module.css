@@ -8,7 +8,7 @@
     background-size: 300px 300px;
 }
 .header{
-    background-color: rgb(226, 207, 172);
+    background-color:rgba(137, 134, 134, 0.804) ;
     height: 27vh;
     display: flex;
     border-radius: 0px 0px 30px 30px;
@@ -25,22 +25,26 @@
     border: 1px solid black;
     box-shadow: 0px 0px 10px black, 0px 0px 10px black;
 }
-.createRecipe{
-    bottom: 3rem;
-    width: 20rem;
-    height: 3rem;
-    border: 2px solid black;
-    box-shadow: 3px 1px black;
-    border-radius: 50px;
-    text-align: center;
-    background-color: rgb(226, 207, 172);
-    font-family: 'Mochiy Pop One', sans-serif;
-    margin-bottom: 3rem;
-    font-size: 1rem;
-    margin-top: 2rem;
+.createDog{
+    position: fixed;
+    bottom: 0px;
+    right: 0.7rem;
+    width: 110px;
+    height: 160px;
 }
-.createRecipe:hover{
+.createDog:hover{
     box-shadow: 0px 0px 10px rgb(226, 207, 172), 0px 0px 10px rgb(226, 207, 172),0px 0px 10px rgb(226, 207, 172);
     text-shadow: 0px 0px 10px black;
     border: 3px solid black;
+}
+
+.addDog{
+    position: fixed;
+    bottom: 0px;
+    right: 0.7rem;
+    width: 110px;
+    height: 160px;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
 }

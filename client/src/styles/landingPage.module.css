@@ -1,17 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Lobster&family=Mochiy+Pop+One&display=swap');
+
 .landingPage{
-    background-image: url("../img/backgroundLandingPage.jpg");
+    background-image: url("https://w0.peakpx.com/wallpaper/333/389/HD-wallpaper-half-a-dog-black-tan-dachshund-dog.jpg");
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.huesoPerro{
-    margin-top: 6rem;
-    width: 25rem;
-    height: 6.5rem;
+.container{
+    margin-left: 10rem;
 }
-.huesoPerro:hover{
-    box-shadow: 0px 0px 10px rgb(112, 72, 72), 0px 0px 10px rgb(112, 72, 72),0px 0px 10px rgb(112, 72, 72),0px 0px 10px rgb(112, 72, 72);
+
+.title{
+    color:white;
+    font-size: 7rem;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+}
+
+.enter{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.7rem;
+    color: white;
+    background-color: rgb(121, 116, 116);
+    border-radius: 10px ;
+    font-weight: bold;
+    font-family: 'Crimson Text', serif;
+}
+
+.enter:hover{
+    border: beige 2px solid;
+    color:beige;
+}
+
+.subtitle{
+    height: 3rem;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 10px;
 }

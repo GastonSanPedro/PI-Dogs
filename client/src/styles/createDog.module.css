@@ -8,10 +8,10 @@
     height: 100vh;
 }
 form{
-    border: 5px solid black;
+    border: 1px solid black;
     width: 35rem;
     height: 35rem;
-    background-color: rgb(153, 149, 142);
+    background-image: url('https://media.discordapp.net/attachments/731670304207798273/1034183953982181477/unknown.png?width=1004&height=473');
     border-radius: 30px;
     padding: 1rem;
     display: flex;

@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    margin-bottom: 8px;
     background-color: none;
     height: 30px;
     width: 70%;
@@ -33,4 +34,8 @@
     height: 30px;
     font-weight: bold;
     margin: 2px;
+}
+
+.paginationNumberButtons:hover{
+    background-color: rgb(241, 245, 244);
 }
