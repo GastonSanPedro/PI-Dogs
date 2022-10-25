@@ -1,5 +1,5 @@
 .container{
-    width: 90vw;
+    max-width: 90vw;
     min-height: 50vh;
     color: white;
     margin-left: 4%;
