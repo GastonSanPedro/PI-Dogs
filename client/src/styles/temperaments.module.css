@@ -1,0 +1,30 @@
+.temperaments{
+    display: flex;
+    background-color: rgba(106, 107, 107, 0.224);
+    border-radius: 15px;
+    background-color:lightslategrey;
+    height: 2.5rem;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.temperaments p{
+    font-size: 0.8rem;
+    border-radius: 15px;
+    padding: 5px;
+    height: 1.5rem;
+    font-weight: bold;
+}
+
+.temperaments button{
+    height: 1.3rem;
+    background-color: red;
+    border-radius: 5px;
+    border: 1.9px solid black;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.temperaments button:hover{
+    background-color: rgb(193, 3, 3);
+}

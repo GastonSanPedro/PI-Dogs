@@ -4,6 +4,8 @@ import s from "../styles/createDog.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+import Temperaments from "./temperaments.jsx"
+
 const validate = (input) => {
 
   let errors = {}
@@ -139,6 +141,13 @@ const setTemperaments = (event)=>{
   })
 }
 
+const deleteTemperament=  (e, temperamentDelete)=>{
+  console.log(temperamentDelete)
+  setInput({
+    ...input,
+    temperament: input.temperament.filter((temperament)=> temperament !==temperamentDelete)
+  })
+}
 
 
   return (
@@ -175,7 +184,7 @@ const setTemperaments = (event)=>{
           <input onChange={cambioEstado} type="text" name="img" placeholder="Enter a URL (optional)" value={input.img}/>
         </article>
         <article>
-          <select onChange={cambioEstado}  name="temperament">
+          <select onChange={cambioEstado}  name="temperament" className={s.temperamentsDog}>
             <option value="Temperament" disabled selected>Temperament</option>
             {allTemperaments && allTemperaments.map((el) => {
                 return (
@@ -183,7 +192,9 @@ const setTemperaments = (event)=>{
                 );
               })}
           </select>
-          <textarea name="description" id="" cols="30" rows="10" value={input.temperament}></textarea>
+          <div className={s.containerTemperaments}>
+          {input.temperament && input.temperament.map((temperament)=> <Temperaments key={temperament} temperament={temperament} deleteTemperament={deleteTemperament}/> )}
+          </div>
         </article>
             <button type="submit" onClick={setTemperaments}className={s.add} disabled={activateButton} style={{border:activateButton? "2px solid red": "2px solid green", color:activateButton?"red": "green"}}>Add Dog</button>
             <Link to="/home"><button className={s.back}>Go Back</button></Link>
