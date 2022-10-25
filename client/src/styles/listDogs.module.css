@@ -1,6 +1,6 @@
 .container{
     width: 90vw;
-    min-height: 34vh;
+    min-height: 50vh;
     color: white;
     margin-left: 4%;
     margin-top: 2rem;
@@ -11,8 +11,10 @@
     border-radius: 50px;
 }
 .anyDog{
-    height: 3rem;
+    height: 5rem;
     border-radius: 10px;
+    text-align: center;
+    padding: 30px;
     background-color: rgba(201, 218, 215, 0.826);
     color:black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

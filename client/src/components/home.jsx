@@ -105,7 +105,7 @@ export default function Home (){
             </article>
             <Pagination allDogs={allDogs} dogsPerPage={dogsPerPage} pagination={pagination} dogsFilter={dogsFilter} paginationNext={paginationNext} paginationBack={paginationBack}/>
             <ListDogs allDogs={currentDog} dogsFilter={currentDogFilter}/> 
-            <Link to="/createDog"><p className={s.addDog}><img src={fotoAddDog} alt="perro" className={s.createDog}/></p></Link>
+            <Link to="/createDog"><img src={fotoAddDog} alt="perro" className={s.createDog}/></Link>
             <Pagination allDogs={allDogs} dogsPerPage={dogsPerPage} pagination={pagination} dogsFilter={dogsFilter} paginationNext={paginationNext} paginationBack={paginationBack}/>
             </div>}
         </div>
