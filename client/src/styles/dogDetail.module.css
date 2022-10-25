@@ -1,5 +1,5 @@
 .container{
-    background-image: url('https://previews.123rf.com/images/evgeniyam/evgeniyam1711/evgeniyam171100103/90013703-patr%C3%B3n-sin-fisuras-con-perros-de-dibujos-animados-sobre-fondo-blanco-ilustraci%C3%B3n-vectorial.jpg');
+    background-image: url('../img/fondoHomeAndDetail.png');
     background-repeat: repeat;
     background-size: cover;
     background-size: 300px 300px;
@@ -12,7 +12,7 @@
 
 .containerDetail{
     margin-top: 10px;
-    background-image: url('https://img.freepik.com/vector-premium/patron-lindas-mascotas-diferentes-perros_113065-737.jpg?w=2000');
+    background-image: url('../img/fondoDetail.webp');
     background-repeat: repeat;
     background-size: 100% 100%;
     display: flex;

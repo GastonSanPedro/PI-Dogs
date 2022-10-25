@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Lobster&family=Mochiy+Pop+One&display=swap');
 
 .landingPage{
-    background-image: url("https://w0.peakpx.com/wallpaper/333/389/HD-wallpaper-half-a-dog-black-tan-dachshund-dog.jpg");
+    background-image: url("../img/fondoLandingPage.jpg");
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;

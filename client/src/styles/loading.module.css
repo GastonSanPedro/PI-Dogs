@@ -1,5 +1,5 @@
 .loading{
-    background-image: url("https://img.freepik.com/vector-premium/diferentes-tipos-perros-gatos-dibujos-animados_52569-1311.jpg?w=2000");
+    background-image: url("../img/fondoLoading.webp");
     width: 100vw;
     height: 100vh;
     display: flex;
