@@ -100,9 +100,11 @@ export default function CreateDog() {
 
   const onSubmit = (event) => {
     event.preventDefault();
+    console.log("llegue aca" )
     dispatch(createDog(input));
     alert("Dog was added successfully");
 
+    
     setInput({
       name: "",
       heightMin: "",
@@ -115,6 +117,7 @@ export default function CreateDog() {
       temperament: [],
     });
   };
+
 
   const cambioEstado = (event) => {
     if(event.target.name === "temperament"){
@@ -148,7 +151,6 @@ const deleteTemperament=  (e, temperamentDelete)=>{
     temperament: input.temperament.filter((temperament)=> temperament !==temperamentDelete)
   })
 }
-
 
   return (
     <div className={s.container}>
@@ -193,7 +195,7 @@ const deleteTemperament=  (e, temperamentDelete)=>{
               })}
           </select>
           <div className={s.containerTemperaments}>
-          {input.temperament && input.temperament.map((temperament)=> <Temperaments key={temperament} temperament={temperament} deleteTemperament={deleteTemperament}/> )}
+          {input.temperament && Array.isArray(input.temperament) && (input.temperament.length > 0) &&input.temperament.map((temperament)=> <Temperaments key={temperament} temperament={temperament} deleteTemperament={deleteTemperament}/> ) }
           </div>
         </article>
             <button type="submit" onClick={setTemperaments}className={s.add} disabled={activateButton} style={{border:activateButton? "2px solid red": "2px solid green", color:activateButton?"red": "green"}}>Add Dog</button>
