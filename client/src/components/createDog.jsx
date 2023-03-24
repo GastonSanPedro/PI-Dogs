@@ -195,7 +195,7 @@ const deleteTemperament=  (e, temperamentDelete)=>{
               })}
           </select>
           <div className={s.containerTemperaments}>
-          {input.temperament && Array.isArray(input.temperament) && (input.temperament.length > 0) &&input.temperament.map((temperament)=> <Temperaments key={temperament} temperament={temperament} deleteTemperament={deleteTemperament}/> ) }
+          {input.temperament && Array.isArray(input.temperament) && (input.temperament.length > 0) && input.temperament.map((temperament)=> <Temperaments key={temperament} temperament={temperament} deleteTemperament={deleteTemperament}/> ) }
           </div>
         </article>
             <button type="submit" onClick={setTemperaments}className={s.add} disabled={activateButton} style={{border:activateButton? "2px solid red": "2px solid green", color:activateButton?"red": "green"}}>Add Dog</button>
