@@ -28,6 +28,6 @@ conn.sync({ force: true }).then(() => {
     temperaments.forEach(async (e) => await Temperament.findOrCreate({ 
       where: {name: e }}))
     console.log("temperamentos cargados con exito")
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+    console.log('%s listening at 3002'); // eslint-disable-line no-console
   });
 });

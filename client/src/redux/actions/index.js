@@ -15,6 +15,7 @@ const axios = require("axios");
 
 export const createDog = (dog)=> async (dispatch)=>{
   try {
+    console.log(dog)
     await axios.post(`/dogs`, dog)
     dispatch({
       type: CREATE_DOG
